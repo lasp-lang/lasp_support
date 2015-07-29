@@ -1,0 +1,17 @@
+{application, lasp_support,
+ [
+  {description, "Support libraries for Lasp from Riak Core."},
+  {vsn, "0.0.1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  crypto,
+                  lager,
+                  eleveldb,
+                  riak_dt
+                 ]},
+  {modules, []},
+  {env, [
+         {plumtree_data_dir, "data"}]}
+ ]}.
