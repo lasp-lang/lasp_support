@@ -884,7 +884,7 @@ orddict_delta(D1, [], Acc) ->
 -spec bitarray_new(integer()) -> hashtree_array().
 bitarray_new(N) -> array:new((N-1) div ?W + 1, {default, 0}).
 
--spec bitarray_set(integer(), hashtree_array()) -> hashtree_array().
+-spec bitarray_set(non_neg_integer(), hashtree_array()) -> hashtree_array().
 bitarray_set(I, A) ->
     AI = I div ?W,
     V = array:get(AI, A),
