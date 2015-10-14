@@ -1,0 +1,8 @@
+  Checking whether the PLT /Users/cmeiklejohn/.combo_dialyzer_plt is up-to-date... yes
+  Checking whether the PLT .local_dialyzer_plt is up-to-date... yes
+  Proceeding with analysis...
+dvvset.erl:156: Type specification dvvset:update(clock(),id()) -> clock() is a supertype of the success typing: dvvset:update({[{_,non_neg_integer(),[any()]}],[any(),...]},_) -> {[{_,non_neg_integer(),[any()]},...],[]}
+dvvset.erl:168: Type specification dvvset:update(clock(),clock(),id()) -> clock() is a supertype of the success typing: dvvset:update({[{_,non_neg_integer(),[any()]}],[any(),...]},{[{_,non_neg_integer(),[any()]}],[any()]},_) -> {[{_,non_neg_integer(),[any()]},...],[any()]}
+hashtree.erl:219: Type specification hashtree:new({index(),tree_id_bin() | non_neg_integer()}) -> hashtree() is a supertype of the success typing: hashtree:new({0,0}) -> hashtree:hashtree()
+ done in 0m4.33s
+done (warnings were emitted)
