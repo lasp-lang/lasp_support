@@ -9,8 +9,4 @@
  {<<"lager">>,
   {git,"git://github.com/basho/lager.git",
        {ref,"d33ccf3b69de09a628fe38b4d7981bb8671b8a4f"}},
-  0},
- {<<"eleveldb">>,
-  {git,"git://github.com/helium/eleveldb.git",
-       {ref,"29a5360dc0365b3330dd0cd45b0b8166f3b854be"}},
   0}].
