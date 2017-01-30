@@ -5,13 +5,13 @@ DIALYZER_APPS = kernel stdlib erts sasl eunit syntax_tools compiler crypto
 
 all: compile
 
-test: common_test
+test: eunit
 
 clean:
 	$(REBAR) clean
 
-common_test:
-	$(REBAR) ct
+eunit:
+	$(REBAR) eunit
 
 compile:
 	$(REBAR) compile
@@ -24,8 +24,6 @@ stage:
 
 DIALYZER_APPS = kernel stdlib sasl erts ssl tools os_mon runtime_tools crypto inets \
 	xmerl webtool eunit syntax_tools compiler mnesia public_key snmp
-
-include tools.mk
 
 typer:
 	typer --annotate -I ../ --plt $(PLT) -r src
