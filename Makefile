@@ -1,26 +1,19 @@
-REBAR = $(shell pwd)/rebar
-.PHONY: deps compile rel
+REBAR = $(shell pwd)/rebar3
+.PHONY: compile rel
 
 DIALYZER_APPS = kernel stdlib erts sasl eunit syntax_tools compiler crypto
-DEP_DIR="_build/lib"
 
 all: compile
 
 test: common_test
 
-deps:
-	$(REBAR) get-deps
-
 clean:
 	$(REBAR) clean
-
-distclean: clean
-	$(REBAR) delete-deps
 
 common_test:
 	$(REBAR) ct
 
-compile: deps
+compile:
 	$(REBAR) compile
 
 rel:
