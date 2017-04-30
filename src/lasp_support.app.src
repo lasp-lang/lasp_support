@@ -7,8 +7,7 @@
                   kernel,
                   stdlib,
                   crypto,
-                  lager,
-                  riak_dt
+                  lager
                  ]},
   {modules, []},
 
