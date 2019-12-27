@@ -1,9 +1,11 @@
 language: erlang
 otp_release:
-  - 19.2
-  - 18.1
-  - 17.4
-  - R16B03
+  - 22.0
+  - 21.2.5
+  - 20.3
+  - 19.3
+install:
+  - wget https://s3.amazonaws.com/rebar3/rebar3 && chmod u+x rebar3
 script:
   - ./rebar3 dialyzer
   - ./rebar3 xref
